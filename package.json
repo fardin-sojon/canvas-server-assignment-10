@@ -18,7 +18,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^7.0.0",
-    "mongoose": "^8.19.3"
+    "mongoose": "^8.19.3",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
