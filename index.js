@@ -29,7 +29,7 @@ async function run() {
 
     const db = client.db('canvas-db')
     const canvasCollection = db.collection('canvas')
-    favoritesCollection = db.collection('favorites');
+    const favoritesCollection = db.collection('favorites');
 
     app.get('/recent-artwork', async (req, res) => {
       const cursor = canvasCollection.find().sort({ createdAt: -1 }).limit(6)
@@ -133,5 +133,8 @@ async function run() {
 run().catch(console.dir);
 
 app.listen(port, () => {
-  console.log(`Canvas Server started on port ${port}`)
+  console.log(`Canvas Server started on port: ${port}`)
 })
+
+
+module.exports = app;
